@@ -1,13 +1,21 @@
 
-var arrayBombe = [1,2,5,10,40,15]; // numeri random da generare
+var arrayBombe = []; // numeri random da generare
 
-console.log(arrayBombe);
+var maxBombe = 16;
 
-var maxTentativi = 5;
+while (arrayBombe.length < maxBombe) {
+  console.log(arrayBombe.length);
+  var bomba = getRandom(1, 100);
+  if(inArray(arrayBombe, bomba) != true) {
+    arrayBombe.push(bomba);
+  }
+}
 
 var punti = 0;
 
 //Uso un ciclo while in modo che possa interrompersi in un momento qualunque e non un numero di volte stabilito
+
+var maxTentativi = 5;
 
 var i = 0;
 
@@ -44,6 +52,12 @@ function inArray(array, elemento) {
     i++
   }
   return trovato;
+}
+
+function getRandom(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min; //Il max è incluso e il min è incluso
 }
 
 // ***********************************************************************************************************************************************
