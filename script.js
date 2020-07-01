@@ -15,7 +15,8 @@ var punti = 0;
 
 //Uso un ciclo while in modo che possa interrompersi in un momento qualunque e non un numero di volte stabilito
 
-var maxTentativi = 5;
+var arrayUtente = [];
+var maxTentativi = 100 - 16;
 
 var i = 0;
 
